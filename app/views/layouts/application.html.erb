@@ -15,14 +15,14 @@
 
 <p>
   <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation" class="active"><a href="/home">Home</a></li>
     <li role="presentation"><a href="/about">About Us</a></li>
     <li role="presentation"><a href="/menu">Menu</a></li>
     <li role="presentation"><a href="#">Order</a></li>
     <li role="presentation"><a href="#">Hours and Location</a></li>
     <li role="presentation">
-      <% if current_user %>
-        <!-- Welcome, <%= current_user.first_name %> -->
+      <% if @current_user %>
+        <!-- Welcome, <%#= current_user.first_name %> -->
         <%= link_to 'Logout', session_path('dummy'), method: :delete %>
       <% else %>
         <%= link_to 'Login', login_path %>
