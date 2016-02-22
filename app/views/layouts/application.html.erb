@@ -8,8 +8,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
-
-
 <body>
 
 
@@ -21,8 +19,7 @@
     <li role="presentation"><a href="#">Order</a></li>
     <li role="presentation"><a href="#">Hours and Location</a></li>
     <li role="presentation">
-      <% if @current_user %>
-        <!-- Welcome, <%#= current_user.first_name %> -->
+      <% if current_user %>
         <%= link_to 'Logout', session_path('dummy'), method: :delete %>
       <% else %>
         <%= link_to 'Login', login_path %>
