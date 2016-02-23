@@ -1,12 +1,17 @@
-<div>
-<h2>a p p e t i z e r s</h2>
 
-    <ol>
-        <% @items.each do |item| %>
-            <li><%= item.name %></li>
-            <li><%= item.amount %></li>
-            <li><%= item.description %></li>
-            <li><%= item.cost %></li>
-        <% end %>
-    </ol>
+<div id="apps">
+  <h2 id="menu_title">a p p e t i z e r s</h2>
+  <% @items.each do |item| %>
+    <br>
+    <article>
+        <h4><strong id="food_name"><p><%= item.name %></p></strong></h4>
+        <p><%= item.amount %></p>
+        <p><%= item.description %></p>
+        <p><%= item.cost %></p>
+    </article>
+  <% end %>
 </div>
+
+
+<!-- HOW TO DISPLAY BY CATEGORY I.E. APPETIZER AND STUFF
+@items.category = "appetizer" -->

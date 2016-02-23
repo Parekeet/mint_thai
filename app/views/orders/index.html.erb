@@ -1,0 +1,15 @@
+
+
+<% if ! current_user %>
+  <h2>Please log in to place an order for pick up!</h2>
+  <%= link_to 'Login', login_path %>
+<% else %>
+  <h2>Welcome, how may we serve you?</h2>
+<!--   <%#= redirect_to %> --><!--  #ADD ROUTE BACK TO ORDERS PAGE AND MAKE IT HIDDEN -->
+<% end %>
+
+
+
+
+
+

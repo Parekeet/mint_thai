@@ -1,6 +1,8 @@
-Order.delete_all
-Item.delete_all
-User.delete_all
+# ItemsOrders.destroy_all
+Order.destroy_all
+Item.destroy_all
+User.destroy_all
+
 
 
 
@@ -35,7 +37,7 @@ satay_chicken = Item.create(
   name: "Satay Chicken",
   amount: "6 Pieces",
   description: "Traditional grilled and marinated chicken, served with peanut sauce and cucumber salad.",
-  cost: 7.50
+  cost: 10
 )
 
 golden_shrimp = Item.create(
