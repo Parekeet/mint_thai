@@ -4,10 +4,10 @@
   <% @items.each do |item| %>
     <br>
     <article>
-        <h4><strong id="food_name"><p><%= item.name %></p></strong></h4>
-        <p><%= item.amount %></p>
-        <p><%= item.description %></p>
-        <p><%= item.cost %></p>
+        <h4><strong class="food_text" id="food_name"><p><%= item.name %></p></strong></h4>
+        <p class="food_text"><%= item.amount %></p>
+        <p class="food_text"><%= item.description %></p>
+        <p class="food_text"><%= item.cost %></p>
     </article>
   <% end %>
 </div>

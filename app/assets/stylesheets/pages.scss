@@ -2,19 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#apps {
+#apps,
+.home_page {
   text-align: center;
-  padding: 10px 60px;
-  margin: 10px 120px;
+  padding: 10px 80px;
+  margin: 10px 180px;
+  background-color: white;
+  opacity: 0.5;
 }
 
 #food_name {
   text-align: center;
 }
 
-#nav_bar {
-  text-align: center;
+
+body {
+  background-image: url('onion.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
 }
 
-
+.food_text {
+  color: black;
+}
 
