@@ -5,7 +5,9 @@
     <%= link_to 'Login', login_path %>
   <% else %>
     <h2>Welcome, how may we serve you?</h2>
-    <h4>Orders:</h4>
+
+    <br>
+    <h4>Old Orders:</h4>
     <!-- <ul> -->
       <% @orders.each do |order| %>
         <div>
@@ -14,6 +16,14 @@
         </div>
       <% end %>
     <!-- </ul> -->
+
+    <br><br>
+    <h4>Create a New Order</h4>
+    <%= form_for @new_order do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.submit "New Order" %>
+    <% end %>
   <!--   <%#= redirect_to %> --><!--  #ADD ROUTE BACK TO ORDERS PAGE AND MAKE IT HIDDEN -->
   <% end %>
 </div>

@@ -4,4 +4,12 @@ class Item < ActiveRecord::Base
   def self.categories
     self.all.pluck(:category).uniq
   end
+
+  def self.appetizers
+    self.where(category: "Appetizers")
+  end
+
+  def self.salads
+    self.where(category: "Salads")
+  end
 end

@@ -1,19 +1,31 @@
 
 <div id="apps">
-  <% Item.categories.each do |category| %>
-    <h2 id="menu_title"><%= category.downcase.split("").join(" ") %></h2>
-    <% Item.where(category: category).each do |item| %>
+<!--
+  <%# Item.categories.each do |category| %>
+    <h2 id="menu_title"><%#= category.downcase.split("").join(" ") %></h2>
+    <%# Item.where(category: category).each do |item| %>
       <br>
       <article>
-          <h4><strong class="food_text" id="food_name"><p><%= item.name %></p></strong></h4>
-          <p class="food_text"><%= item.amount %></p>
-          <p class="food_text"><%= item.description %></p>
-          <p class="food_text"><%= item.cost %></p>
+          <h4><strong class="food_text" id="food_name"><p><%#= item.name %></p></strong></h4>
+          <p class="food_text"><%#= item.amount %></p>
+          <p class="food_text"><%#= item.description %></p>
+          <p class="food_text"><%#= item.cost %></p>
       </article>
-    <% end %>
+    <%# end %>
     <hr>
-  <% end %>
+  <%# end %>
+-->
 
+  <h2 id="menu_title">a p p e t i z e r s</h2>
+  <% Item.appetizers.each do |item| %>
+    <br>
+    <article>
+        <h4><strong class="food_text" id="food_name"><p><%= item.name %></p></strong></h4>
+        <p class="food_text"><%= item.amount %></p>
+        <p class="food_text"><%= item.description %></p>
+        <p class="food_text"><%= item.cost %></p>
+    </article>
+  <% end %>
 </div>
 
 

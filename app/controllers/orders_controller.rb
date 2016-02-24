@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
 
   def index
     @orders = current_user.orders
+    @new_order = Order.new
   end
 
 
@@ -16,9 +17,11 @@ class OrdersController < ApplicationController
 
 
   def create
-  @order = Order.new(params.require(:order).permit(:name, :total, :user))
+    @order      = Order.new(params.require(:order).permit(:name))
+    @order.user = current_user
+
     if @order.save
-      redirect_to orders_path
+      redirect_to edit_order_path(@order)
     else
       render :new
     end
@@ -26,6 +29,7 @@ class OrdersController < ApplicationController
 
   def edit
     @order = Order.find(params[:id])
+    @item  = Item.new
   end
 
 
