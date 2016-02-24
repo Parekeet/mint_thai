@@ -1,5 +1,60 @@
 
-<div id="apps">
+<div id="menu">
+
+  <h1 class="food_text">a p p e t i z e r s</h1>
+  <% Item.appetizers.each do |item| %>
+    <br>
+    <article>
+        <h4><strong class="food_text"><p><%= item.name %></p></strong></h4>
+        <p class="food_text"><%= item.amount %></p>
+        <p class="food_text"><%= item.description %></p>
+        <p class="food_text"><%= item.cost %></p>
+    </article>
+  <% end %>
+
+  <br><br><br>
+
+  <h1 class="food_text">s a l a d s</h1>
+  <% Item.salads.each do |item| %>
+    <br>
+    <article>
+        <h4><strong class="food_text"><p><%= item.name %></p></strong></h4>
+        <p class="food_text"><%= item.amount %></p>
+        <p class="food_text"><%= item.description %></p>
+        <p class="food_text"><%= item.cost %></p>
+    </article>
+  <% end %>
+
+  <br><br><br>
+
+  <h1 class="food_text">s o u p s</h1>
+  <% Item.soups.each do |item| %>
+    <br>
+    <article>
+        <h4><strong class="food_text"><p><%= item.name %></p></strong></h4>
+        <p class="food_text"><%= item.amount %></p>
+        <p class="food_text"><%= item.description %></p>
+        <p class="food_text"><%= item.cost %></p>
+    </article>
+  <% end %>
+
+  <br><br><br>
+
+  <h1 class="food_text">n o o d l e s</h1>
+  <% Item.noodles.each do |item| %>
+    <br>
+    <article>
+        <h4><strong class="food_text"><p><%= item.name %></p></strong></h4>
+        <p class="food_text"><%= item.amount %></p>
+        <p class="food_text"><%= item.description %></p>
+        <p class="food_text"><%= item.cost %></p>
+    </article>
+  <% end %>
+
+</div>
+
+
+
 <!--
   <%# Item.categories.each do |category| %>
     <h2 id="menu_title"><%#= category.downcase.split("").join(" ") %></h2>
@@ -15,19 +70,3 @@
     <hr>
   <%# end %>
 -->
-
-  <h2 id="menu_title">a p p e t i z e r s</h2>
-  <% Item.appetizers.each do |item| %>
-    <br>
-    <article>
-        <h4><strong class="food_text" id="food_name"><p><%= item.name %></p></strong></h4>
-        <p class="food_text"><%= item.amount %></p>
-        <p class="food_text"><%= item.description %></p>
-        <p class="food_text"><%= item.cost %></p>
-    </article>
-  <% end %>
-</div>
-
-
-<!-- HOW TO DISPLAY BY CATEGORY I.E. APPETIZER AND STUFF
-@items.category = "appetizer" -->

@@ -1,5 +1,8 @@
 class OrdersController < ApplicationController
 
+  before_action :authorize, only: [:show, :edit, :create, :index]
+
+
   def index
     @orders = current_user.orders
     @new_order = Order.new

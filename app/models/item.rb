@@ -12,4 +12,12 @@ class Item < ActiveRecord::Base
   def self.salads
     self.where(category: "Salads")
   end
+
+  def self.soups
+    self.where(category: "Soups")
+  end
+
+  def self.noodles
+    self.where(category: "Noodles")
+  end
 end

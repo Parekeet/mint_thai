@@ -2,28 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#apps,
-.home_page {
-  text-align: center;
-  padding: 10px 80px;
-  margin: 10px 180px;
-  background-color: white;
-  opacity: 0.5;
-}
-
-#food_name {
-  text-align: center;
-}
-
-
 body {
   background-image: url('onion.jpg');
   background-size: cover;
   background-attachment: fixed;
-  z-index: -1;
 }
 
-.food_text {
-  color: black;
+#menu,                //Frosted Glass Effect
+.home_page {
+  text-align: center;
+  padding: 10px 50px;
+  margin: 10px 180px;
+  background-color: white;
+  background: rgba(204, 204, 204, 0.8);
+  min-width: 260px;
 }
+
+.food_text {          //Text-Alignment
+  color: black;
+  min-width: 260px;
+  text-align: center;
+}
+
 
