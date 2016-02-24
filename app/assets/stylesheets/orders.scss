@@ -9,6 +9,12 @@
   background: rgba(204, 204, 204, 0.8);
 }
 
+body#orders_page {
+  background-image: url('three.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
 
 
 

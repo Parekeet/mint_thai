@@ -13,5 +13,8 @@ Rails.application.routes.draw do
     # these are the "add item to order" and "remove item from order" routes
     resources :items, only: [:create, :destroy]
   end
+
+  post '/orders/:id/edit' => "orders#edit"
+
 end
 

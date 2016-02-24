@@ -26,4 +26,16 @@ body {
   text-align: center;
 }
 
+body#home_page {
+  background-image: url('salmon.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
 
+body#about_page {
+  background-image: url('spices.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}

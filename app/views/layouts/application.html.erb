@@ -17,12 +17,13 @@
     <li role="presentation"><a href="/menu">Menu</a></li>
     <li role="presentation"><a href="/orders">Order</a></li>
     <li role="presentation"><a href="#">Hours and Location</a></li>
-    <li role="presentation">
+    <li role="presentation" class="nav nav-pills pull-right">
       <% if current_user %>
-        <%= link_to 'Logout', session_path('dummy'), method: :delete %>
+        <li role="presentation" class="nav nav-pills pull-right"><%= link_to 'Logout', session_path('dummy'), method: :delete %></li>
+        <li role="presentation" class="nav nav-pills pull-right"><%= link_to current_user.first_name, orders_path %></li>
       <% else %>
         <%= link_to 'Login', login_path %>
-        <li role="presentation"><%= link_to 'Sign Up', new_user_path %></li>
+        <li role="presentation" class="nav nav-pills pull-right"><%= link_to 'Sign Up', new_user_path %></li>
       <% end %>
     </li>
   </ul>
