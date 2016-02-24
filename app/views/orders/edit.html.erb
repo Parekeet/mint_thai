@@ -1,39 +1,32 @@
+<div>
+  <h1 style="color: white">Edit your order!</h1>
+    <%= form_for @order do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.submit "Change Name" %>
+    <% end %>
+</div>
 
-<h1 style="color: white">Edit your order!</h1>
+<div>
+  <h3 style="color: white">Current Items</h3>
+    <% @order.items.each do |item| %>
+      <button><%= item.name %></button>
+    <% end %>
 
-<%= form_for @order do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit "Change Name" %>
-<% end %>
+    <h3 style="color: white">Add Appetizers</h3>
+    <%= form_for [@order, @item] do |f| %>
+      <%= f.collection_select :id, Item.appetizers, :id, :name %>
+      <%= f.submit "Add!" %>
+    <% end %>
 
-<h3 style="color: white">Current Items</h3>
+    <h3 style="color: white">Add Salads</h3>
+    <%= form_for [@order, @item] do |f| %>
+      <%= f.collection_select :id, Item.salads, :id, :name %>
+      <%= f.submit "Add!" %>
+    <% end %>
+</div>
 
-<% @order.items.each do |item| %>
-  <button><%= item.name %></button>
-<% end %>
 
-<h3 style="color: white">Add Appetizers</h3>
-<%= form_for [@order, @item] do |f| %>
-  <%= f.collection_select :id, Item.appetizers, :id, :name %>
-  <%= f.submit "Add!" %>
-<% end %>
-
-<h3 style="color: white">Add Salads</h3>
-<%= form_for [@order, @item] do |f| %>
-  <%= f.collection_select :id, Item.salads, :id, :name %>
-  <%= f.submit "Add!" %>
-<% end %>
-
-<!-- <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Category
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <!-- <li><a href="/menu"><%#= :category %></a></li> -->
-
-    <!-- <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div> -->
+<!--          <#%= link_to edit_order_path(@order, item), method: :delete, class: "btn btn-default" do %>
+           <#%= item.destroy %> <i class="glyphicon glyphicon-remove" style="color: red;"></i>
+         <#% end %> -->
