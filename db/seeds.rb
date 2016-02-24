@@ -8,7 +8,7 @@ User.destroy_all
 
 #ITEM TEMPLATE
 #  = Item.create(
-#   category: "appetizer",
+#   category: "Appetizers",
 #   name: "",
 #   amount: " Pieces",
 #   description: "",
@@ -33,7 +33,7 @@ User.create(
 
 
 satay_chicken = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Satay Chicken",
   amount: "6 Pieces",
   description: "Traditional grilled and marinated chicken, served with peanut sauce and cucumber salad.",
@@ -41,7 +41,7 @@ satay_chicken = Item.create(
 )
 
 golden_shrimp = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Golden Shrimp",
   amount: "7 Pieces",
   description: "Crispy, deep-fried stuffed shrimp spring roll, served with sweet and sour sauce.",
@@ -49,7 +49,7 @@ golden_shrimp = Item.create(
 )
 
 egg_rolls = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Egg Rolls",
   amount: "8 Pieces",
   description: "Marinated mixed vegetables wrapped into a crispy spring roll, served with sweet and sour sauce.",
@@ -57,7 +57,7 @@ egg_rolls = Item.create(
 )
 
 fried_tofu = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Fried Tofu",
   amount: "2 Pieces",
   description: "Deep-fried soft tofu, served with sweet and sour sauce and topped with ground peanuts.",
@@ -65,7 +65,7 @@ fried_tofu = Item.create(
 )
 
 fish_cake = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Fish Cakes",
   amount: "8 Pieces",
   description: "Deep-fried fish paste seasoned with Thai spices, served with sweet and sour sauce topped with ground peanuts.",
@@ -73,14 +73,14 @@ fish_cake = Item.create(
 )
 
 eastern_sausage = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Eastern Thai Style Sausage",
   description: "Northeastern-style pork sausage served with cabbage, shallots, lime, chili, ginger, and peanuts.",
   cost: 6.50
 )
 
 cream_cheese_rangoon = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Cream Cheese Rangoon",
   amount: "6 Pieces",
   description: "Crisp wonton wrapper filled with soft cream cheese and green onions, served with a side of sweet and sour sauce.",
@@ -88,7 +88,7 @@ cream_cheese_rangoon = Item.create(
 )
 
 fried_gyoza = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Fried Gyoza",
   amount: "8 Pieces",
   description: "Deep-fried seasoned pot stickers, seasame vinegar soysauce.",
@@ -96,7 +96,7 @@ fried_gyoza = Item.create(
 )
 
 fried_wonton = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Fried Wonton",
   amount: "12 Pieces",
   description: "Marinated ground chicken wrapped in wonton skins, served with sweet and sour sauce.",
@@ -105,28 +105,28 @@ fried_wonton = Item.create(
 
 
 fried_calamari = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Fried Calamari",
   description: "Lightly battered, deep-fried calamari, served with sweet and sour sauce.",
   cost: 7.50
 )
 
 thai_pork_jerky = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Thai Style Pork Jerky",
   description: "Deep-fried, marinated pork jerky, served with traditional sauce; recommeded with sticky rice.",
   cost: 7.50
 )
 
 edamame = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Edamame",
   description: "Lightly boiled edamame.",
   cost: 2.95
 )
 
 chicken_wings = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Chicken Wings",
   description: "Flavorful spicy, peppered fried chicken wings, topped with a pinch of sugar, served with our Thai hot sauce.",
   cost: 6.50
@@ -134,7 +134,7 @@ chicken_wings = Item.create(
 
 
 popcorn_chicken = Item.create(
-  category: "appetizer",
+  category: "Appetizers",
   name: "Popcorn Chicken",
   description: "Spicy, deep-fried seasoned chicken lightly coated with flour, spiced with salt and pepper, and topped with basil leaves.",
   cost: 5.95
