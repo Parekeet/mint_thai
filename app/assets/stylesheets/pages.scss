@@ -6,10 +6,12 @@ body {
   background-image: url('onion.jpg');
   background-size: cover;
   background-attachment: fixed;
+  z-index: -1;
 }
 
-#menu,                //Frosted Glass Effect
-.home_page {
+#menu,
+#about,                //Frosted Glass Effect
+#home {
   text-align: center;
   padding: 10px 50px;
   margin: 10px 180px;
