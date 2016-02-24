@@ -10,8 +10,6 @@ Rails.application.routes.draw do
   get '/about' => "pages#about"
   get '/menu' => "pages#menu"
 
-  get "order/" => "orders#index"
-  #o=rders show
-  get "orders/new" => "orders#new", as: :new_order
+  resources :orders, only: [:index, :new, :edit, :update, :destroy]
 end
 

@@ -1,15 +1,24 @@
 
+<div id="orders">
+  <% if ! current_user %>
+    <h2>Please log in to place an order for pick up!</h2>
+    <%= link_to 'Login', login_path %>
+  <% else %>
+    <h2>Welcome, how may we serve you?</h2>
+    <h4>Orders:</h4>
+    <!-- <ul> -->
+      <% @orders.each do |order| %>
+        <div>
+          <%= order.name %>
+          <%= order.total %>
+        </div>
+      <% end %>
+    <!-- </ul> -->
+  <!--   <%#= redirect_to %> --><!--  #ADD ROUTE BACK TO ORDERS PAGE AND MAKE IT HIDDEN -->
+  <% end %>
+</div>
 
-<% if ! current_user %>
-  <h2>Please log in to place an order for pick up!</h2>
-  <%= link_to 'Login', login_path %>
-<% else %>
-  <h2>Welcome, how may we serve you?</h2>
-<!--   <%#= redirect_to %> --><!--  #ADD ROUTE BACK TO ORDERS PAGE AND MAKE IT HIDDEN -->
-<% end %>
-
-
-
+<%= link_to "Delete this order", orders_path, method: :delete, data: { confirm: "Are you sure you want to delete this order?"} %>
 
 
 
