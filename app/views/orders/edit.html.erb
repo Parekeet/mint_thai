@@ -1,7 +1,5 @@
 <body id="orders_page">
 
-<div id="orders">
-
 <!-- EDIT ORDER : SHOWS NAME OF THE ORDER -->
     <div>
       <h1 style="color: white">Edit your order!</h1>
@@ -11,18 +9,21 @@
           <%= f.submit "Change Name" %>
         <% end %>
     </div>
+<div id="orders">
+
 
 <!-- CALCULATES AND SHOWS THE ITEM SANS TAX -->
 
     <div id="current_orders" class="edit_orders">
-      <h3 style="color: white">Current Items</h3>
+      <h3 style="color: black">Current Items</h3>
         <% @order.items.each do |item| %>
           <ul id="order_sum">
-            <li><button><%= item.name %></button></li>
-            <li><button><%= item.cost %></button></li>
-            <li><%= Item.sum(:cost) %><li>
+            <li><button><%= item.name %>&nbsp;&nbsp;$<%= item.cost %></button></li>
+<!--             <li><#%= Item.sum(:cost) %><li> -->
           </ul>
         <% end %>
+      <hr>
+      <h3>TOTAL GOES HERE</h3>
     </div>
 
     <div class="divider"></div>
@@ -31,29 +32,31 @@
 
     <div id="adding_items" class="edit_orders">
 
-        <h3 style="color: white">Add Appetizers</h3>
+        <h3 style="color: black">Add Appetizers</h3>
         <%= form_for [@order, @item] do |f| %>
           <%= f.collection_select :id, Item.appetizers, :id, :name %>
           <%= f.submit "Add!" %>
         <% end %>
 
-        <h3 style="color: white">Add Salads</h3>
+        <h3 style="color: black">Add Salads</h3>
         <%= form_for [@order, @item] do |f| %>
           <%= f.collection_select :id, Item.salads, :id, :name %>
           <%= f.submit "Add!" %>
         <% end %>
 
-        <h3 style="color: white">Add Soups</h3>
+        <h3 style="color: black">Add Soups</h3>
         <%= form_for [@order, @item] do |f| %>
           <%= f.collection_select :id, Item.soups, :id, :name %>
           <%= f.submit "Add!" %>
         <% end %>
 
-         <h3 style="color: white">Add Noodles</h3>
+         <h3 style="color: black">Add Noodles</h3>
         <%= form_for [@order, @item] do |f| %>
           <%= f.collection_select :id, Item.noodles, :id, :name %>
           <%= f.submit "Add!" %>
         <% end %>
+
+        <br>
 
         <button><%= link_to "Submit Order", orders_path%></button>
 

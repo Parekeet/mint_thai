@@ -3,12 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-image: url('onion.jpg');
+  background-image: url('mortar.jpg');
   background-size: cover;
   background-attachment: fixed;
   z-index: -1;
 }
-
+#contact,
 #menu,
 #about              //Frosted Glass Effect
  {
@@ -41,6 +41,19 @@ body#about_page {
   z-index: -1;
 }
 
+body#menu_page {
+  background-image: url('onion.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+body#contact_page {
+  background-image: url('springroll.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
 
 #mint {
   font-size: 150px;
@@ -49,7 +62,7 @@ body#about_page {
 }
 
 .contact {
-  color: white;
+  color: black;
   margin-left: 18%;
   margin-right: 18%;
   margin-top: 20px;
@@ -65,7 +78,10 @@ body#about_page {
   float: right;
 }
 
-
+#sign_in {
+  padding-top: 50px;
+  padding-left: 45px;
+}
 
 
 
