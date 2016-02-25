@@ -16,6 +16,12 @@
  *= require_tree .
  */
 
+@font-face {
+ font-family: Alanis;
+ src: url('alanis.ttf');
+}
+
+
 #nav_bar {
   position: relative;
   padding-top: 45px;
@@ -23,7 +29,21 @@
 
 .nav {
   background-color: white;
+  color: black !important;
+  font-weight: bold;
 }
+
+#nav_pad {
+  padding-left: 60px;
+  padding-right:60px;
+}
+
+#nav_pad_home {
+  padding-left: 275px;
+  padding-right:60px;
+}
+
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";

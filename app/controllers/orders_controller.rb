@@ -53,9 +53,11 @@ class OrdersController < ApplicationController
     redirect_to orders_path
   end
 
-  def sum(*args)
-    calculate(:sum, *args)
+  def total
+    @order = Order.find(params[:id].Item.sum(:cost))
   end
+
+
 
 
 end

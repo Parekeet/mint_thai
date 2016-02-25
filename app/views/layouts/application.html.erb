@@ -12,12 +12,12 @@
 
 <p id="nav_bar">
   <ul class="nav nav-pills">
-    <li role="presentation"><a href="/home">Home</a></li>
-    <li role="presentation"><a href="/about">About Us</a></li>
-    <li role="presentation"><a href="/menu">Menu</a></li>
-    <li role="presentation"><a href="/orders">Order</a></li>
-    <li role="presentation"><a href="/contact">Contact Us</a></li>
-    <li role="presentation" class="nav nav-pills pull-right">
+    <li role="presentation" id="nav_pad_home"><a href="/home">Home</a></li>
+    <li role="presentation" id="nav_pad"><a href="/about">About Us</a></li>
+    <li role="presentation" id="nav_pad"><a href="/menu">Menu</a></li>
+    <li role="presentation" id="nav_pad"><a href="/orders">Order</a></li>
+    <li role="presentation" id="nav_pad"><a href="/contact">Contact Us</a></li>
+    <li role="presentation" id="nav_pad" class="nav nav-pills pull-right">
       <% if current_user %>
         <li role="presentation" class="nav nav-pills pull-right"><%= link_to 'Logout', session_path('dummy'), method: :delete %></li>
         <li role="presentation" class="nav nav-pills pull-right"><%= link_to current_user.first_name, orders_path %></li>
