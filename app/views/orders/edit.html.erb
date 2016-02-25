@@ -1,34 +1,67 @@
-<div>
-  <h1 style="color: white">Edit your order!</h1>
-    <%= form_for @order do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-      <%= f.submit "Change Name" %>
-    <% end %>
-</div>
+<body id="orders_page">
 
-<div>
-  <h3 style="color: white">Current Items</h3>
-    <% @order.items.each do |item| %>
-      <button><%= item.name %></button>
-    <% end %>
+<div id="orders">
 
-    <h3 style="color: white">Add Appetizers</h3>
-    <%= form_for [@order, @item] do |f| %>
-      <%= f.collection_select :id, Item.appetizers, :id, :name %>
-      <%= f.submit "Add!" %>
-    <% end %>
+<!-- EDIT ORDER : SHOWS NAME OF THE ORDER -->
+    <div>
+      <h1 style="color: white">Edit your order!</h1>
+        <%= form_for @order do |f| %>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+          <%= f.submit "Change Name" %>
+        <% end %>
+    </div>
 
-    <h3 style="color: white">Add Salads</h3>
-    <%= form_for [@order, @item] do |f| %>
-      <%= f.collection_select :id, Item.salads, :id, :name %>
-      <%= f.submit "Add!" %>
-    <% end %>
-</div>
+<!-- CALCULATES AND SHOWS THE ITEM SANS TAX -->
+
+    <div id="current_orders" class="edit_orders">
+      <h3 style="color: white">Current Items</h3>
+        <% @order.items.each do |item| %>
+          <ul id="order_sum">
+            <li><button><%= item.name %></button></li>
+            <li><button><%= item.cost %></button></li>
+            <li><%= Item.sum(:cost) %><li>
+          </ul>
+        <% end %>
+    </div>
+
+    <div class="divider"></div>
+
+<!-- ADDING ITEMS -->
+
+    <div id="adding_items" class="edit_orders">
+
+        <h3 style="color: white">Add Appetizers</h3>
+        <%= form_for [@order, @item] do |f| %>
+          <%= f.collection_select :id, Item.appetizers, :id, :name %>
+          <%= f.submit "Add!" %>
+        <% end %>
+
+        <h3 style="color: white">Add Salads</h3>
+        <%= form_for [@order, @item] do |f| %>
+          <%= f.collection_select :id, Item.salads, :id, :name %>
+          <%= f.submit "Add!" %>
+        <% end %>
+
+        <h3 style="color: white">Add Soups</h3>
+        <%= form_for [@order, @item] do |f| %>
+          <%= f.collection_select :id, Item.soups, :id, :name %>
+          <%= f.submit "Add!" %>
+        <% end %>
+
+         <h3 style="color: white">Add Noodles</h3>
+        <%= form_for [@order, @item] do |f| %>
+          <%= f.collection_select :id, Item.noodles, :id, :name %>
+          <%= f.submit "Add!" %>
+        <% end %>
+
+        <button><%= link_to "Submit Order", orders_path%></button>
+
+    </div>
+  </div>
+</body>
 
 
-
-
-<!--          <#%= link_to edit_order_path(@order, item), method: :delete, class: "btn btn-default" do %>
-           <#%= item.destroy %> <i class="glyphicon glyphicon-remove" style="color: red;"></i>
-         <#% end %> -->
+  <!--          <#%= link_to edit_order_path(@order, item), method: :delete, class: "btn btn-default" do %>
+             <#%= item.destroy %> <i class="glyphicon glyphicon-remove" style="color: red;"></i>
+           <#% end %> -->

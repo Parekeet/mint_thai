@@ -10,14 +10,15 @@ body {
 }
 
 #menu,
-#about,                //Frosted Glass Effect
-#home {
+#about              //Frosted Glass Effect
+ {
   text-align: center;
   padding: 10px 50px;
   margin: 10px 180px;
   background-color: white;
   background: rgba(204, 204, 204, 0.8);
   min-width: 260px;
+  margin-top: 70px;
 }
 
 .food_text {          //Text-Alignment
@@ -27,7 +28,7 @@ body {
 }
 
 body#home_page {
-  background-image: url('salmon.jpg');
+  background-image: url('nara.jpg');
   background-size: cover;
   background-attachment: fixed;
   z-index: -1;
@@ -39,3 +40,41 @@ body#about_page {
   background-attachment: fixed;
   z-index: -1;
 }
+
+
+#mint {
+  font-size: 150px;
+  color: white;
+  padding-top: 70px;
+}
+
+.contact {
+  color: white;
+  margin-left: 18%;
+  margin-right: 18%;
+  margin-top: 20px;
+}
+
+
+
+#map {
+  float: left;
+}
+
+#info {
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

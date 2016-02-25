@@ -1,21 +1,41 @@
-// Place all the styles related to the orders controller here.
-// They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#orders {
-  text-align: center;
-  padding: 10px 80px;
+// #orders {
+//   text-align: center;
+//   padding: 10px 80px;
+//   margin: 10px 180px;
+//   background: rgba(204, 204, 204, 0.8);
+// }
+
+ #orders {
+  padding: 10px 50px;
   margin: 10px 180px;
+  background-color: white;
   background: rgba(204, 204, 204, 0.8);
+  min-width: 260px;
+  margin-top: 70px;
+  margin-bottom: 180px;
 }
 
 body#orders_page {
-  background-image: url('three.jpg');
+  background-image: url('darkthai.jpg');
   background-size: cover;
   background-attachment: fixed;
   z-index: -1;
 }
 
+#order_sum {
+  list-style: none;
+}
 
+.divider{
+    position:absolute;
+    left:50%;
+    top:18%;
+    bottom:1%;
+    border-left:1px solid white;
+}
 
-
+#current_orders {
+  float: right;
+}

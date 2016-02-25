@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/home' => "pages#home"
   get '/about' => "pages#about"
   get '/menu' => "pages#menu"
+  get '/contact' => "pages#contact"
 
   resources :orders, except: [:show] do
     # these are the "add item to order" and "remove item from order" routes

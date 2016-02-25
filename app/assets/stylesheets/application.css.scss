@@ -16,9 +16,14 @@
  *= require_tree .
  */
 
+#nav_bar {
+  position: relative;
+  padding-top: 45px;
+}
 
-
-
+.nav {
+  background-color: white;
+}
 
 @import "bootstrap-sprockets";
 @import "bootstrap";

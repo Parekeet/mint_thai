@@ -53,7 +53,9 @@ class OrdersController < ApplicationController
     redirect_to orders_path
   end
 
-
+  def sum(*args)
+    calculate(:sum, *args)
+  end
 
 
 end
