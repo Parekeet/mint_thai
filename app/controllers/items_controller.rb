@@ -12,4 +12,11 @@ class ItemsController < ApplicationController
     redirect_to edit_order_path(order)
   end
 
+  def destroy
+    order = Order.find params[:order_id]
+    item = Item.find params[:id]
+    order.items.delete(item)
+    redirect_to edit_order_path(order)
+  end
+
 end

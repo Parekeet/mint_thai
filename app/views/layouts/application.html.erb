@@ -12,18 +12,18 @@
 
 <p id="nav_bar">
   <ul class="nav nav-pills">
-    <li role="presentation" id="nav_pad_home"><a href="/home">Home</a></li>
-    <li role="presentation" id="nav_pad"><a href="/about">About Us</a></li>
-    <li role="presentation" id="nav_pad"><a href="/menu">Menu</a></li>
-    <li role="presentation" id="nav_pad"><a href="/orders">Order</a></li>
-    <li role="presentation" id="nav_pad"><a href="/contact">Contact Us</a></li>
-    <li role="presentation" id="nav_pad" class="nav nav-pills pull-right">
+    <li role="presentation"><a href="/home">H o m e</a></li>
+    <li role="presentation"><a href="/about">A b o u t &nbsp;&nbsp; U s</a></li>
+    <li role="presentation"><a href="/menu">M e n u</a></li>
+    <li role="presentation"><a href="/orders">O r d e r</a></li>
+    <li role="presentation"><a href="/contact">C o n t a c t &nbsp;&nbsp; U s</a></li>
+    <li role="presentation" class="nav nav-pills pull-right">
       <% if current_user %>
-        <li role="presentation" class="nav nav-pills pull-right"><%= link_to 'Logout', session_path('dummy'), method: :delete %></li>
+        <li role="presentation" class="nav nav-pills pull-right"><%= link_to 'L o g o u t', session_path('dummy'), method: :delete %></li>
         <li role="presentation" class="nav nav-pills pull-right"><%= link_to current_user.first_name, orders_path %></li>
       <% else %>
-        <%= link_to 'Login', login_path %>
-        <li role="presentation" class="nav nav-pills pull-right"><%= link_to 'Sign Up', new_user_path %></li>
+        <%= link_to 'L o g i n', login_path %>
+        <li role="presentation" class="nav nav-pills pull-right"><%= link_to 'S i g n  U p', new_user_path %></li>
       <% end %>
     </li>
   </ul>

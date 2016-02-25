@@ -1,4 +1,3 @@
-# ItemsOrders.destroy_all
 Order.destroy_all
 Item.destroy_all
 User.destroy_all
