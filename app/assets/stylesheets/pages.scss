@@ -72,10 +72,14 @@ body#contact_page {
 
 #map {
   float: left;
+  border: 2px solid black;
 }
 
 #info {
   float: right;
+  background-color: white;
+  padding: 15px 10px;
+  border: 2px solid black;
 }
 
 #sign_in {

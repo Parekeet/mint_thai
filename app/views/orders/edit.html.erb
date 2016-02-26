@@ -2,9 +2,9 @@
 
 <!-- EDIT ORDER : SHOWS NAME OF THE ORDER -->
     <div>
-      <h1 style="color: white">Edit your order!</h1>
+      <h2 style="color: white">Edit your order</h2>
         <%= form_for @order do |f| %>
-          <%= f.label :name %>
+          <div style="color:white"><%= f.label :name %><br></div>
           <%= f.text_field :name %>
           <%= f.submit "Change Name" %>
         <% end %>
@@ -14,18 +14,6 @@
 
 <!-- CALCULATES AND SHOWS THE ITEM SANS TAX -->
 
-<!--     <div id="current_orders" class="edit_orders">
-      <h3 style="color: black">Current Items</h3>
-        <#% @order.items.each do |item| %>
-          <ul id="order_sum">
-            <li><button><#%= item.name %>&nbsp;&nbsp;$<#%= item.cost %></button></li>
-          </ul>
-        <#% end %>
-      <hr>
-      <h3><#%= @total %></h3>
-    </div>
-
-    <div class="divider"></div> -->
 
     <% order_subtotal = 0.0 %>
     <div id="current_orders" class="edit_orders">
@@ -34,13 +22,12 @@
           <% order_subtotal += item.cost %>
           <div class="row">
             <div class="col-sm-9">
-<!--                 <h3>Total</h3> -->
               <div class="row">
                 <div class="col-xs-8 col-sm-6 text-left">
                   <%= item.name %>
                 </div>
                 <div class="col-xs-4 col-sm-6 text-right">
-                  <%= number_to_currency(item.cost) %>&nbsp;&nbsp;
+                  <%= number_to_currency(item.cost)%> &nbsp;&nbsp;
                   <%= link_to '<i class="glyphicon glyphicon-remove" style="color: red;"></i>'.html_safe, order_item_path(@order, item), method: :delete %>
                 </div>
               </div>
@@ -49,11 +36,11 @@
         <% end %>
       <hr>
       <% tax = (order_subtotal * 0.09).round(2) %>
-      <ul>
+      <ul class="text-right" style="list-style: none">
         <li>Subtotal: <%= number_to_currency(order_subtotal) %></li>
         <li>Tax: <%= number_to_currency(tax) %></li>
       </ul>
-      <h3>TOTAL HERE: <%= number_to_currency(order_subtotal + tax) %></h3>
+      <h4>Total: <%= number_to_currency(order_subtotal + tax) %></h4>
     </div>
 
     <div class="divider"></div>
