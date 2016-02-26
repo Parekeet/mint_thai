@@ -1,0 +1,110 @@
+/* line 5, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+body {
+  background-image: url("mortar.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+/* line 11, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+#contact,
+#menu,
+#about {
+  text-align: center;
+  padding: 10px 50px;
+  margin: 10px 180px;
+  background-color: white;
+  background: rgba(204, 204, 204, 0.8);
+  min-width: 260px;
+  margin-top: 70px;
+}
+
+/* line 24, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+.food_text {
+  color: black;
+  min-width: 260px;
+  text-align: center;
+}
+
+/* line 30, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+body#home_page {
+  background-image: url("nara.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+/* line 37, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+body#about_page {
+  background-image: url("spices.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+/* line 44, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+body#menu_page {
+  background-image: url("onion.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+/* line 51, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+body#contact_page {
+  background-image: url("springroll.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+/* line 58, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+#mint {
+  font-size: 150px;
+  color: white;
+  padding-top: 70px;
+}
+
+/* line 64, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+.contact {
+  color: black;
+  margin-left: 18%;
+  margin-right: 18%;
+  margin-top: 20px;
+}
+
+/* line 73, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+#map {
+  float: left;
+  border: 2px solid black;
+}
+
+/* line 78, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+#info {
+  float: right;
+  background-color: white;
+  padding: 15px 10px;
+  border: 2px solid black;
+}
+
+/* line 85, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+#sign_in {
+  padding-top: 50px;
+  padding-left: 45px;
+}
+
+/* line 90, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+.pictures {
+  display: inline block;
+  max-width: 250px;
+  margin: 0px 15px;
+  border: 2px solid black;
+}
+
+/* line 97, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/pages.scss */
+.so {
+  width: 780px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}

@@ -1,0 +1,55 @@
+/* line 10, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/orders.scss */
+#orders {
+  padding: 10px 50px;
+  margin: 10px auto;
+  background-color: white;
+  background: rgba(204, 204, 204, 0.8);
+  width: 700px;
+  margin-top: 70px;
+  margin-bottom: 180px;
+}
+
+/* line 20, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/orders.scss */
+body#orders_page {
+  background-image: url("darkthai.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+/* line 27, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/orders.scss */
+#order_sum {
+  list-style: none;
+}
+
+/* line 31, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/orders.scss */
+.divider {
+  position: absolute;
+  left: 50%;
+  top: 18%;
+  bottom: 1%;
+  border-left: 1px solid white;
+}
+
+/* line 39, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/orders.scss */
+#current_orders {
+  float: right;
+  left: 40%;
+  color: black;
+}
+
+/* line 45, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/orders.scss */
+#show {
+  width: 300px;
+  height: 400px;
+  margin: 50px auto;
+  padding: 0px 30px;
+  background-color: white;
+  background: rgba(204, 204, 204, 0.8);
+  border: 50px;
+}
+
+/* line 55, /Users/chavinv/code/wdi/project02/mint_thai/app/assets/stylesheets/orders.scss */
+#show_price {
+  padding-left: 71px;
+}

@@ -35,17 +35,15 @@
           </div>
         <% end %>
       <hr>
-      <% tax = (order_subtotal * 0.09).round(2) %>
-      <ul class="text-right" style="list-style: none">
-        <li>Subtotal: <%= number_to_currency(order_subtotal) %></li>
-        <li>Tax: <%= number_to_currency(tax) %></li>
-      </ul>
+        <% tax = (order_subtotal * 0.09).round(2) %>
+          <ul class="text-right" style="list-style: none">
+            <li>Subtotal: <%= number_to_currency(order_subtotal) %></li>
+            <li>Tax: <%= number_to_currency(tax) %></li>
+          </ul>
       <h4>Total: <%= number_to_currency(order_subtotal + tax) %></h4>
     </div>
 
     <div class="divider"></div>
-
-
 
 <!-- ADDING ITEMS -->
 
@@ -77,7 +75,7 @@
 
         <br>
 
-        <button><%= link_to "Submit Order", orders_path %></button>
+        <button><%= link_to "Submit Order", orders_path, data: { confirm: "Thank you for submitting your order"} %></button>
         <button><%= link_to "Cancel Order", orders_path %></button>
 
     </div>
@@ -87,6 +85,4 @@
 </body>
 
 
-<!--            <#%= link_to edit_order_path(@order, item), method: :delete, class: "btn btn-default" do %>
-             <#%= item.destroy %> <i class="glyphicon glyphicon-remove" style="color: red;"></i>
-           <#% end %> -->
+
